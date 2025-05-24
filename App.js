@@ -5,7 +5,7 @@ import 'moment/locale/fr';
 import { useEffect, useState } from 'react';
 import { ActivityIndicator, FlatList, Image, ImageBackground, Keyboard, StyleSheet, Text, TextInput, View } from 'react-native';
 
-const API_KEY = 'e92d597d95d0beff0e8359e2adb46e5b'; // Remplacez par votre clé API OpenWeatherMap
+const API_KEY = 'e92d597d95d0beff0e8359e2adb46e5b'; 
 
 const weatherBackgrounds = {
   Clear: require('./assets/soleil.jpg'),
@@ -70,7 +70,7 @@ export default function App() {
       setForecast(dailyData);
 
         
-      // 🔽 Ajoute ceci pour les horaires d'aujourd'hui :
+    
           const today = moment().format('YYYY-MM-DD');
           const hourlyToday = forecastResponse.data.list.filter(item => item.dt_txt.startsWith(today));
           setTodayHourly(hourlyToday);
@@ -100,7 +100,7 @@ export default function App() {
       setForecast(dailyData);
       
 
-     // 🔽 Ajoute ceci pour les horaires d'aujourd'hui :
+     
        const today = moment().format('YYYY-MM-DD');
        const hourlyToday = forecastResponse.data.list.filter(item => item.dt_txt.startsWith(today));
        setTodayHourly(hourlyToday);
@@ -218,14 +218,14 @@ const styles = StyleSheet.create({
   },
    forecastTitle:{
       width: '90%',
-     borderWidth: 1,           // Épaisseur de la bordure
-    borderColor: 'transparent',      // Couleur de la bordure
-    padding: 10,              // Espace intérieur
-    borderRadius: 8,          // Coins arrondis (optionnel)
-    textAlign: 'center',      // Centre le texte
-    color: '#fff',            // Couleur du texte
-    fontSize: 18,             // Taille du texte
-    marginBottom: 10,         // Espace en dessous du titre
+     borderWidth: 1,          
+    borderColor: 'transparent',      
+    padding: 10,             
+    borderRadius: 8,          
+    textAlign: 'center',      
+    color: '#fff',          
+    fontSize: 18,            
+    marginBottom: 10,      
     backgroundColor: 'rgba(255, 255, 255, 0.1)',
      
    },
