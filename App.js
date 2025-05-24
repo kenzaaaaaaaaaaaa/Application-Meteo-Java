@@ -96,7 +96,7 @@ export default function App() {
       const forecastResponse = await axios.get(
         `https://api.openweathermap.org/data/2.5/forecast?q=${search}&appid=${API_KEY}&units=metric&lang=fr`
       );
-      const dailyData = forecastResponse.data.list.filter(reading => reading.dt_txt.includes("12:00:00"));
+      const dailyData = forecastResponse.data.list.filter(reading => reading.dt_txt.includes("00:00:00"));
       setForecast(dailyData);
       
 
